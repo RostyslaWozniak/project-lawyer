@@ -38,10 +38,13 @@ const ServicesSection = () => {
           key={id}
           className="content flex flex-col items-center px-0 sm:my-5 lg:flex-row"
         >
-          <AnimateElement>
+          <AnimateElement delay={0.2}>
             <img src={imgUrl} alt={title} className="mx-auto w-half-content" />
           </AnimateElement>
-          <AnimateElement className="mx-auto flex w-half-content min-w-[50vw] flex-col items-start gap-10 p-5 sm:px-10">
+          <AnimateElement
+            delay={0.2}
+            className="mx-auto flex w-half-content min-w-[50vw] flex-col items-start gap-10 p-5 sm:px-10"
+          >
             <h3 className="text-2xl text-[black] sm:text-3xl">{title}</h3>
             <p className="text-sm sm:text-lg">{text}</p>
             <Button className="overflow-hidden hover:bg-light hover:text-dark">

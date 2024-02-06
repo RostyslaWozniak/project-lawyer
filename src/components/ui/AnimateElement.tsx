@@ -11,7 +11,7 @@ type AnimateElementProps = {
 const AnimateElement = ({
   children,
   className,
-  delay = 0.5,
+  delay = 0.3,
   duration = 0.5,
   repeat = false,
 }: AnimateElementProps) => {
@@ -21,7 +21,7 @@ const AnimateElement = ({
       initial={{ opacity: 0, translateY: 20 }}
       whileInView={{ opacity: 1, translateY: 0 }}
       transition={{ duration, delay }}
-      viewport={{ once: repeat }}
+      viewport={{ once: !repeat }}
     >
       {children}
     </motion.div>
