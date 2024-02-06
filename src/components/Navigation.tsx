@@ -17,7 +17,7 @@ const Navigation = () => {
   const { windowWidth } = useWindowDimensions();
   return (
     <nav
-      className="absolute left-0 h-lvh w-screen bg-gradient-to-b from-primary to-accent py-20 text-2xl font-bold text-dark duration-300 lg:static lg:block lg:h-5 lg:w-[350px] lg:bg-none lg:p-0 lg:text-base lg:font-normal lg:text-light"
+      className="absolute left-0 h-dvh w-screen bg-gradient-to-b from-primary to-accent py-20 text-2xl font-bold text-dark duration-300 lg:static lg:block lg:h-5 lg:w-[350px] lg:bg-none lg:p-0 lg:text-base lg:font-normal lg:text-light"
       style={{
         top: isBurgerNavActive ? "0px" : "-1000px",
       }}
