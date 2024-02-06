@@ -8,7 +8,7 @@ const Header = () => {
     <header className="fixed top-0 z-50 h-20 w-screen backdrop-blur-xl backdrop-brightness-50">
       <div className="content flex h-full items-center justify-between">
         <NavContextProvider>
-          <Logo className=" scale-75 lg:scale-100" />
+          <Logo className="scale-75 lg:scale-100" />
           <Navigation />
           <BurgerButton />
         </NavContextProvider>

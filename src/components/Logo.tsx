@@ -14,7 +14,7 @@ const Logo = ({
 }: LogoProps) => {
   return (
     <div
-      className={twMerge(className)}
+      className={twMerge(`cursor-pointer`, className)}
       onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
     >
       <svg
