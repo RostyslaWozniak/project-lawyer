@@ -3,6 +3,7 @@ import backgroundImg from "/src/assets/images/background/hero-bg.jpg";
 import Button from "../../../components/ui/Button";
 import Heading from "./Heading";
 import AnimateElement from "../../../components/ui/AnimateElement";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -28,8 +29,10 @@ const HeroSection = () => {
           </p>
         </AnimateElement>
         <AnimateElement delay={0.7} className="flex gap-10">
-          <Button className="hover:bg-light hover:text-dark">
-            <a href="">Learn more</a>
+          <Button className="overflow-hidden hover:bg-light hover:text-dark">
+            <Link className="w-full p-16" to="services">
+              Learn more
+            </Link>
           </Button>
         </AnimateElement>
       </div>

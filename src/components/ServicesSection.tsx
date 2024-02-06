@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AnimateElement from "./ui/AnimateElement";
 import Button from "./ui/Button";
 import image1 from "/src/assets/images/services-1.jpg";
@@ -9,21 +10,21 @@ const servicesData = [
     imgUrl: image1,
     title: "Contract Drafting and Review",
     text: "We offer efficient, effective contract drafting and review services to help lawyers ensure their clients get the best agreements.",
-    link: "#",
+    link: "services",
   },
   {
     id: 2,
     imgUrl: image2,
     title: "Corporate Law Advice",
     text: "Our corporate law advice service offers tailored solutions to ensure your business is compliant with all relevant legislation.",
-    link: "#",
+    link: "services",
   },
   {
     id: 3,
     imgUrl: image3,
     title: "Business Formation and Operation",
     text: "With our lawyer promotion service, you can take advantage of powerful online presence to increase your reach and visibility.",
-    link: "#",
+    link: "services",
   },
 ];
 const ServicesSection = () => {
@@ -43,8 +44,10 @@ const ServicesSection = () => {
           <AnimateElement className="mx-auto flex w-half-content min-w-[50vw] flex-col items-start gap-10 p-5 sm:px-10">
             <h3 className="text-2xl text-[black] sm:text-3xl">{title}</h3>
             <p className="text-sm sm:text-lg">{text}</p>
-            <Button className="hover:bg-light hover:text-dark">
-              <a href={link}>Learn more</a>
+            <Button className="overflow-hidden hover:bg-light hover:text-dark">
+              <Link className="w-full p-16" to={link}>
+                Learn more
+              </Link>
             </Button>
           </AnimateElement>
         </div>

@@ -11,7 +11,7 @@ const Button = ({ children, onClick, className }: ButtonProps) => {
     <button
       onClick={onClick}
       className={twMerge(
-        `min-w-52 border-2 border-accent bg-accent px-10 py-2 text-sm text-light duration-300 md:text-lg`,
+        `min-w-52 border-2 border-accent bg-accent py-2 text-sm text-light duration-300 md:text-lg`,
         className,
       )}
     >
