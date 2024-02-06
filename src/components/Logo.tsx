@@ -13,7 +13,10 @@ const Logo = ({
   size = { width: 70, height: 60 },
 }: LogoProps) => {
   return (
-    <div className={twMerge(className)}>
+    <div
+      className={twMerge(className)}
+      onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
+    >
       <svg
         width={size.width}
         height={size.height}
