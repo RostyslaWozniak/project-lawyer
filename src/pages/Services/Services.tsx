@@ -9,7 +9,7 @@ const Services = () => {
     });
   }, []);
   return (
-    <div className="mt-28">
+    <div className="">
       <ServicesSection />
     </div>
   );
