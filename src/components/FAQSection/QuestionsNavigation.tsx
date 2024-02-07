@@ -8,7 +8,11 @@ const QuestionsNavigation = () => {
   return (
     <div className="mx-auto flex w-half-content flex-col items-center gap-5">
       {typeOfQuestion.map(({ id, type, name }) => (
-        <AnimateElement className="w-[min(300px,100%)]" delay={id * 0.1}>
+        <AnimateElement
+          key={id}
+          className="w-[min(300px,100%)]"
+          delay={id * 0.1}
+        >
           <Button
             key={name}
             onClick={() => handleFilteringQuestions(type)}

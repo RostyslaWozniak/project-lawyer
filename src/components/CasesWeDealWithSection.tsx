@@ -37,6 +37,7 @@ const CasesWeDealWithSection = () => {
           <AnimateElement
             key={id}
             className="flex w-[300px] flex-col items-center  gap-5 text-center"
+            delay={id * 0.1}
           >
             <img src={icon} alt={`${title} icon`} />
             <h3 className="heading-5">{title}</h3>
