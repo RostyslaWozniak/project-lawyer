@@ -9,7 +9,7 @@ const Contact = () => {
     });
   }, []);
   return (
-    <div className="">
+    <div className="mt-20">
       <ContactSection />
     </div>
   );

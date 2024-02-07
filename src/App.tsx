@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="flex min-h-[100vh] flex-col ">
       <Header />
-      <main className="mt-20 grid grow">
+      <main className="grid grow">
         <Outlet />
       </main>
       <Footer />
