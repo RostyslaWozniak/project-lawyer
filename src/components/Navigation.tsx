@@ -38,9 +38,9 @@ const Navigation = () => {
       </ul>
       {windowWidth < lgWidth && (
         <div className=" absolute bottom-0 left-0 mt-10 grid gap-5 p-3">
-          <Logo />
-          <Address className="text-base font-normal text-light" />
+          <Logo size={{ width: 120, height: 120 }} isNameVisible />
           <Contact className="text-base font-normal text-light" />
+          <Address className="text-base font-normal text-light" />
         </div>
       )}
     </nav>

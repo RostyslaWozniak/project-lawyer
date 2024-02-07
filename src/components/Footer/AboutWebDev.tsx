@@ -1,6 +1,6 @@
 const AboutWebDev = () => {
   return (
-    <div className="flex w-[min(400px,100%)] flex-col">
+    <div className="flex min-w-[300px] flex-col">
       <p>
         Designed & build by{" "}
         <a
