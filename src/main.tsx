@@ -11,13 +11,14 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./assets/index.css";
+import Error from "./pages/Error/Error.tsx";
 const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       <Route path="services" element={<Services />} />
       <Route path="contact" element={<Contact />} />
-      {/* <Route path="*" element={<Error />} /> */}
+      <Route path="*" element={<Error />} />
     </Route>,
   ),
 );
