@@ -21,7 +21,7 @@ const QuestionItem = ({ id, question, answer }: QuestionItemProps) => {
       viewport={{ once: true }}
       onClick={(e) => handleClickOnQuestion(e, id)}
     >
-      <div className=" flex cursor-pointer flex-col gap-2 overflow-hidden duration-300">
+      <div className=" grid cursor-pointer gap-2 duration-300">
         <div className="flex w-full items-start justify-between">
           <p className="text-lg font-medium sm:text-2xl">{question}</p>
           <img
@@ -32,15 +32,19 @@ const QuestionItem = ({ id, question, answer }: QuestionItemProps) => {
             }}
           />
         </div>
-        <p
-          onClick={(e) => e.stopPropagation()}
-          className="cursor-text text-sm duration-500 ease-in-out sm:text-base"
+        <div
+          className="grid duration-300"
           style={{
-            height: isActive ? "50px" : "0px",
+            gridTemplateRows: isActive ? "1fr" : "0fr",
           }}
         >
-          {answer}
-        </p>
+          <p
+            onClick={(e) => e.stopPropagation()}
+            className="cursor-text overflow-hidden text-sm sm:text-base"
+          >
+            {answer}
+          </p>
+        </div>
       </div>
     </motion.li>
   );
