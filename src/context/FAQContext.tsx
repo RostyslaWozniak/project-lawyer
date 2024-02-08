@@ -13,6 +13,11 @@ export type FAQContext = {
     answer: string;
   }[];
   typeOfQuestions: string;
+  activeQuestionId: null | number;
+  handleClickOnQuestion: (
+    e: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    id: number,
+  ) => void;
   handleFilteringQuestions: (type: string) => void;
 };
 
@@ -26,6 +31,7 @@ export function useFAQContext() {
 export function FAQContextProvider({ children }: FAQContextProviderProps) {
   const [typeOfQuestions, setTypeOfQuestions] = useState(allQuestions);
   const [filteredQuestions, setFilteredQuestions] = useState(FAQData);
+  const [activeQuestionId, setActiveQuestionId] = useState<null | number>(null);
 
   function handleFilteringQuestions(type: string) {
     setFilteredQuestions(() => {
@@ -34,12 +40,30 @@ export function FAQContextProvider({ children }: FAQContextProviderProps) {
       return FAQData.filter((question) => question.type === type);
     });
   }
+
+  function handleClickOnQuestion(
+    e: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    id: number,
+  ) {
+    e.stopPropagation();
+    const activeId = filteredQuestions.find(
+      (question) => question.id === id,
+    )?.id;
+    if (activeQuestionId === id) {
+      return setActiveQuestionId(null);
+    }
+    return setActiveQuestionId(activeId || null);
+  }
+
+  document.body.addEventListener("click", () => setActiveQuestionId(null));
   return (
     <FAQContext.Provider
       value={{
         filteredQuestions,
         typeOfQuestions,
+        activeQuestionId,
         handleFilteringQuestions,
+        handleClickOnQuestion,
       }}
     >
       {children}

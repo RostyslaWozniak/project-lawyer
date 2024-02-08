@@ -5,7 +5,7 @@ import QuestionsNavigation from "./QuestionsNavigation";
 const FAQSection = () => {
   return (
     <FAQContextProvider>
-      <section className="my-28 grid gap-10">
+      <section className="my-20 grid gap-10">
         <h2 className="text-center text-3xl font-semibold md:text-4xl">
           Frequently asked questions
         </h2>

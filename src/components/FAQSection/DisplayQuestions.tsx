@@ -5,7 +5,7 @@ const DisplayQuestions = () => {
   const { filteredQuestions } = useFAQContext();
 
   return (
-    <ul className="mx-auto grid w-half-content gap-5">
+    <ul className="mx-auto flex w-half-content flex-col justify-start gap-5">
       {filteredQuestions.map((question) => (
         <QuestionItem key={question.id} {...question} />
       ))}
